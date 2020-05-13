@@ -9,7 +9,7 @@ export default {
 
   storage: multer.diskStorage({
     destination: tmpFolder,
-    filename: (request, file, callback) {
+    filename: (request, file, callback) => {
       const fileHash = criypto.randomBytes(10).toString('HEX');
       const fileName = `${fileHash}-${file.originalname}`;
 
